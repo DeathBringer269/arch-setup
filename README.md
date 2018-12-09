@@ -204,6 +204,17 @@ This will:
     echo 'D /media 0755 root root 0 -' | sudo tee /etc/tmpfiles.d/media.conf
     ```
 
+* Install [Sublime Text][sublime-text] and [Sublime Merge][sublime-merge].
+
+    ```
+    curl -sfO https://download.sublimetext.com/sublimehq-pub.gpg
+    sudo pacman-key --add sublimehq-pub.gpg
+    sudo pacman-key --lsign-key 8A8F901A
+    rm sublimehq-pub.gpg
+    echo -e "\n[sublime-text]\nServer = https://download.sublimetext.com/arch/stable/x86_64" | sudo tee -a /etc/pacman.conf
+    yay -Syu sublime-text sublime-merge
+    ```
+
 * Install extra packages.
 
     ```
@@ -320,3 +331,5 @@ This will:
 [opencl]: https://wiki.archlinux.org/index.php/OpenCL
 [avahi]: https://wiki.archlinux.org/index.php/avahi
 [udiskie]: https://wiki.archlinux.org/index.php/Udisks
+[sublime-text]: https://www.sublimetext.com/
+[sublime-merge]: https://www.sublimemerge.com/
