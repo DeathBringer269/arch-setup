@@ -4,7 +4,7 @@ This repository contains scripts that will install ArchLinux on laptop with full
 
 Installation scripts assume following configuration:
 
-* Laptop has [Intel GPU][i915] with >1080p display
+* Laptop has Skylake [Intel GPU][i915] (or newer) with >1080p display
 * One [NVMe][] drive that will be fully used for ArchLinux
 * BIOS is capable of [UEFI][] [Secure Boot][]
 * [systemd-boot][] will be used as bootloader
@@ -221,7 +221,7 @@ This will:
 
     # misc utilities
     yay -S --needed tar cpio bzip2 gzip lrzip lz4 zstd lzip lzop xz p7zip unrar zip unzip
-    yay -S --needed acpi sysstat lsof strace jq fzf ripgrep light nvme-cli
+    yay -S --needed bc acpi sysstat lsof strace jq fzf ripgrep light nvme-cli
 
     # terminal software
     yay -S htop ncdu mosh tmux weechat micro-bin

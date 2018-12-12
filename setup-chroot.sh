@@ -70,7 +70,7 @@ sed -i 's/^\(BINARIES=\).*$/\1("\/usr\/bin\/btrfs")/' /etc/mkinitcpio.conf
 sed -i 's/^\(HOOKS=\).*$/\1(base udev autodetect keyboard consolefont modconf block encrypt openswap resume filesystems fsck)/' /etc/mkinitcpio.conf
 sed -i 's/^#\(COMPRESSION="xz"\)$/\1/' /etc/mkinitcpio.conf
 
-echo "options i915 fastboot=1 enable_fbc=1 enable_gvt=1 enable_psr=0" > /etc/modprobe.d/i915.conf
+echo "options i915 fastboot=1 enable_fbc=1 enable_guc=3 enable_psr=0" > /etc/modprobe.d/i915.conf
 
 # rebuild initramfs & remove fallback
 
